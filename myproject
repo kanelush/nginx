@@ -1,0 +1,12 @@
+server {
+    listen 80;
+    server_name chillin.cl www.chillin.cl;
+
+location /static/ {
+    alias /home/ubuntu/myproject/static/;
+}
+
+location / {
+    proxy_pass http://167.172.130.201:8000;
+    }
+}
